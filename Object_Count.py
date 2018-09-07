@@ -15,7 +15,7 @@ plt.show()
 
 def count_objects(img):
     objects = [[0 for i in range(0, len(img[0]))] for j in range(0, len(img))]
-    object_count = 1
+    object_count = 0
     for i in range(0, len(img)):
         for j in range(0, len(img[i])):
             flag = 0
