@@ -15,12 +15,17 @@ pixel_freq1_arr = []
 pixel_freq2 = {}
 pixel_freq2_arr = []
 
-cv2.imshow('1_Image', img_arr1)
-cv2.imshow('2_Image', img_arr2)
-plt.hist(img_arr1.ravel(), 256, [0, 256])  # Image Histogram
-plt.show()
-plt.hist(img_arr2.ravel(), 256, [0, 256])  # Image Histogram
-plt.show()
+fig = plt.figure(figsize=(16, 16))
+ax = fig.add_subplot(3, 2, 1)
+plt.imshow(img_arr1, cmap='gray')
+ax = fig.add_subplot(3, 2, 2)
+plt.hist(img_arr1.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
+
+ax = fig.add_subplot(3, 2, 3)
+plt.imshow(img_arr2, cmap='gray')
+ax = fig.add_subplot(3, 2, 4)
+plt.hist(img_arr2.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
+
 
 # For the First Image
 for i in range(0, len(img_arr1)):
@@ -70,9 +75,8 @@ for i in range(0, len(img_arr1)):
     for j in range(0, len(img_arr1[i])):
         img_arr1[i][j] = pixel_freq1[img_arr1[i][j]]
 
-plt.hist(img_arr1.ravel(), 256, [0, 256])  # Image Histogram
+ax = fig.add_subplot(3, 2, 5)
+plt.imshow(img_arr1, cmap='gray')
+ax = fig.add_subplot(3, 2, 6)
+plt.hist(img_arr1.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
 plt.show()
-cv2.imshow('New_Image', img_arr1)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-

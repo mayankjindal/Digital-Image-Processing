@@ -6,12 +6,14 @@ import matplotlib.pyplot as plt
 
 img = cv2.imread('/home/mayank/Downloads/Test_Images/Mandrill.tiff', 0)
 
-plt.hist(img.ravel(), 256, [0, 256])  # Image Histogram
-plt.show()
-
 img_arr = np.array(img)
 pixel_freq = {}
-cv2.imshow('Original_Image', img_arr)
+fig = plt.figure(figsize=(16, 16))
+ax = fig.add_subplot(2, 2, 1)
+plt.imshow(img_arr, cmap='gray')
+ax = fig.add_subplot(2, 2, 2)
+plt.hist(img_arr.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
+
 
 for i in range(0, len(img_arr)):
     for j in range(0, len(img_arr[i])):
@@ -31,9 +33,8 @@ for i in range(0, len(img_arr)):
     for j in range(0, len(img_arr[i])):
         img_arr[i][j] = pixel_freq[img_arr[i][j]]
 
-plt.hist(img_arr.ravel(), 256, [0, 256])  # Image Histogram
+ax = fig.add_subplot(2, 2, 3)
+plt.imshow(img_arr, cmap='gray')
+ax = fig.add_subplot(2, 2, 4)
+plt.hist(img_arr.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
 plt.show()
-cv2.imshow('New_Image', img_arr)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-

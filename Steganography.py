@@ -7,6 +7,10 @@ import numpy as np
 
 def encode_text_in_image(text):
     n = len(text)
+    c = img_arr.shape[0]*img_arr.shape[1]
+
+    if (c/8 - 16) < n:
+        return "N"
     ascii_text = []
     for i in text:
         ascii_text.append(bin(ord(i))[2:].zfill(8))
@@ -32,6 +36,7 @@ def encode_text_in_image(text):
             j += 1
 
     cv2.imwrite('/home/mayank/Downloads/StegoDataset/Text_In_Lena.tiff', img_arr)
+    return "Y"
 
 
 def decode_text_in_image(arr):
@@ -66,6 +71,13 @@ def encode_image_in_image(arr):
         for j in range(0, len(arr[i])):
             pixel_bin.append(bin(arr[i][j])[2:].zfill(8))
 
+    m = arr.shape[0]*arr.shape[1]
+    c = img_arr.shape[0]*img_arr.shape[1]
+
+    if (c/8 - 32) < m:
+        return "N"
+
+    print("\nDimensions of the Encoded Image: ", arr.shape[0], arr.shape[1])
     # Encoding Image Dimensions
     rows = bin(arr.shape[0])[2:].zfill(16)
     cols = bin(arr.shape[1])[2:].zfill(16)
@@ -92,6 +104,7 @@ def encode_image_in_image(arr):
             j += 1
 
     cv2.imwrite('/home/mayank/Downloads/StegoDataset/Image_In_Lena.tiff', img_arr)
+    return "Y"
 
 
 def decode_image_in_image(arr):
@@ -103,7 +116,7 @@ def decode_image_in_image(arr):
     for i in range(16, 32):
         col.append(bin(arr[0][i])[2:][-1])
     col = int("".join(col), 2)
-    print("\nDimensions of the Decoded Image: ", row, ", ", col)
+    print("Dimensions of the Decoded Image: ", row, col)
 
     # Decoding Image
     decoded_arr = []
@@ -134,18 +147,23 @@ img_arr = np.array(img)
 
 # Text For Encryption
 original_text = 'Exploring Image Binarization Techniques - The book focuses on an image processing technique known as binarization. It provides a comprehensive survey over existing binarization techniques for both document and graphic images. A number of evaluation techniques have been presented for quantitative comparison of different binarization methods. The book provides results obtained comparing a number of standard and widely used binarization algorithms using some standard evaluation metrics. The comparative results presented in tables and charts facilitates understanding the process. In addition to this, the book presents techniques for preparing a reference image which is very much important for quantitative evaluation of the binarization techniques. The results are produced taking image samples from standard image databases.'
-encode_text_in_image(original_text)
-
-img = cv2.imread('/home/mayank/Downloads/StegoDataset/Text_In_Lena.tiff', 0)
-img_arr_2 = np.array(img)
-decode_text_in_image(img_arr_2)
+ans = encode_text_in_image(original_text)
+if ans == "Y":
+    # Reading Text Encoded Image
+    img = cv2.imread('/home/mayank/Downloads/StegoDataset/Text_In_Lena.tiff', 0)
+    img_arr_2 = np.array(img)
+    decode_text_in_image(img_arr_2)
+else:
+    print("Text cannot be encoded. Size is too big!")
 
 # Image For Encryption
 small_img = cv2.imread('/home/mayank/Downloads/StegoDataset/F16.tiff', 0)
 small_img_arr = np.array(small_img)
-encode_image_in_image(small_img_arr)
-
-img = cv2.imread('/home/mayank/Downloads/StegoDataset/Image_In_Lena.tiff', 0)
-img_arr_2 = np.array(img)
-decode_image_in_image(img_arr_2)
-
+ans = encode_image_in_image(small_img_arr)
+if ans == "Y":
+    # Reading Image Encoded Image
+    img = cv2.imread('/home/mayank/Downloads/StegoDataset/Image_In_Lena.tiff', 0)
+    img_arr_2 = np.array(img)
+    decode_image_in_image(img_arr_2)
+else:
+    print("Image cannot be encoded. Size is too big!")
