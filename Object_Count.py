@@ -1,14 +1,12 @@
 import matplotlib.pyplot as plt
-from skimage import io
-import matplotlib.image as mp
-from PIL import Image
-import numpy as np
+import cv2
+
 
 # counting the number of objects
-Image_obj_count = io.imread('/home/mayank/Downloads/Test_Images/TestIMage.png', as_gray=True)
+Image_obj_count = cv2.imread('/home/mayank/Downloads/Test_Images/TestIMage.png', 0)
 print(len(Image_obj_count), len(Image_obj_count[0]))
 
-Image_obj_count = Image_obj_count*255
+Image_obj_count = Image_obj_count
 plt.hist(Image_obj_count.ravel(), 256, [0, 256])
 plt.show()
 
@@ -52,9 +50,7 @@ def count_objects(img):
     print(objects)
     b = []
     for i in range(0, len(objects)):
-        for j in range(0, len(objects[i])):
-            if objects[i][j] not in b:
-                b.append(objects[i][j])
+        b = set(list(b) + objects[i])
     print(len(b))
 
 
