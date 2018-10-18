@@ -1,82 +1,63 @@
 # Histogram Matching
 
-import cv2, math
-import numpy as np
+from Histogram_Equalization import HistogramEqualization as HE
 import matplotlib.pyplot as plt
 
 
-img1 = cv2.imread('/home/mayank/Downloads/Test_Images/House.tiff', 0)
-img2 = cv2.imread('/home/mayank/Downloads/Test_Images/Lena.tiff', 0)
+class HistogramMatching:
 
-img_arr1 = np.array(img1)
-img_arr2 = np.array(img2)
-pixel_freq1 = {}
-pixel_freq1_arr = []
-pixel_freq2 = {}
-pixel_freq2_arr = []
+    def __init__(self, loc1, loc2):
+        # Calling class for Histogram Equalization
+        self.img1 = HE(loc1)
+        self.img1.compute()
 
-fig = plt.figure(figsize=(16, 16))
-ax = fig.add_subplot(3, 2, 1)
-plt.imshow(img_arr1, cmap='gray')
-ax = fig.add_subplot(3, 2, 2)
-plt.hist(img_arr1.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
+        self.img2 = HE(loc2)
+        self.img2.compute()
 
-ax = fig.add_subplot(3, 2, 3)
-plt.imshow(img_arr2, cmap='gray')
-ax = fig.add_subplot(3, 2, 4)
-plt.hist(img_arr2.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
+        self.map = {}
+        self.matched = {}
+
+    def display_initial(self):
+        self.fig = plt.figure(figsize=(16, 16))
+        ax = self.fig.add_subplot(3, 2, 1)
+        plt.imshow(self.img1.img_arr, cmap='gray')
+        ax = self.fig.add_subplot(3, 2, 2)
+        plt.hist(self.img1.img_arr.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
+
+        ax = self.fig.add_subplot(3, 2, 3)
+        plt.imshow(self.img2.img_arr, cmap='gray')
+        ax = self.fig.add_subplot(3, 2, 4)
+        plt.hist(self.img2.img_arr.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
+
+    def match(self):
+        for i in self.img1.final_val.keys():
+            self.map[i] = 0
+            self.matched[i] = 0
+        for i in self.img1.final_val.keys():
+            for j in self.img2.final_val.keys():
+                if self.img1.final_val[i] >= self.img2.final_val[j]:
+                    self.map[i] = j
+                    break
+
+        for i in self.map.keys():
+            self.matched[i] += self.img1.cum_dis[i]
+
+        for i in range(0, len(self.img1.new_img_arr)):
+            for j in range(0, len(self.img1.new_img_arr[i])):
+                self.img1.new_img_arr[i][j] = self.img1.final_val[self.img1.img_arr[i][j]]
+
+    def display_final(self):
+        ax = self.fig.add_subplot(3, 2, 5)
+        plt.imshow(self.img1.new_img_arr, cmap='gray')
+        ax = self.fig.add_subplot(3, 2, 6)
+        plt.hist(self.img1.new_img_arr.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
+        plt.show()
 
 
-# For the First Image
-for i in range(0, len(img_arr1)):
-    for j in range(0, len(img_arr1[i])):
-        if img_arr1[i][j] in pixel_freq1.keys():
-            pixel_freq1[img_arr1[i][j]] += 1
-        else:
-            pixel_freq1[img_arr1[i][j]] = 1
-
-n = img_arr1.size
-prob_sum = 0
-for i in pixel_freq1.keys():
-    pixel_freq1[i] = pixel_freq1[i]/n
-    prob_sum += pixel_freq1[i]
-    pixel_freq1[i] = math.floor((prob_sum + pixel_freq1[i])*255)
-    pixel_freq1_arr.append(pixel_freq1[i])
-
-# Now for the second image
-for i in range(0, len(img_arr2)):
-    for j in range(0, len(img_arr2[i])):
-        if img_arr2[i][j] in pixel_freq2.keys():
-            pixel_freq2[img_arr2[i][j]] += 1
-        else:
-            pixel_freq2[img_arr2[i][j]] = 1
-
-n = img_arr2.size
-prob_sum = 0
-for i in pixel_freq2.keys():
-    pixel_freq2[i] = pixel_freq2[i]/n
-    prob_sum += pixel_freq2[i]
-    pixel_freq2[i] = math.floor((prob_sum + pixel_freq2[i])*255)
-    pixel_freq2_arr.append(pixel_freq2[i])
-
-new_img_arr = []
-for i in range(0, len(pixel_freq1_arr)):
-
-    for j in range(0, len(pixel_freq2_arr)):
-        if pixel_freq1_arr[i] <= pixel_freq2_arr[j]:
-            new_img_arr.append(j)
-
-k = 0
-for i in pixel_freq1.keys():
-    pixel_freq1[i] = new_img_arr[k]
-    k += 1
-
-for i in range(0, len(img_arr1)):
-    for j in range(0, len(img_arr1[i])):
-        img_arr1[i][j] = pixel_freq1[img_arr1[i][j]]
-
-ax = fig.add_subplot(3, 2, 5)
-plt.imshow(img_arr1, cmap='gray')
-ax = fig.add_subplot(3, 2, 6)
-plt.hist(img_arr1.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
-plt.show()
+if __name__ == '__main__':
+    location1 = '/home/mayank/Downloads/Test_Images/image2.jpg'
+    location2 = '/home/mayank/Downloads/Test_Images/image1.jpg'
+    obj = HistogramMatching(location1, location2)
+    obj.display_initial()
+    obj.match()
+    obj.display_final()
