@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3cf1be66-34b0-4cce-bbd9-986ac1d33286" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Histogram_Equalization.py" beforeDir="false" afterPath="$PROJECT_DIR$/Histogram_Equalization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Histogram_Matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/Histogram_Matching.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image Segmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image Segmentation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_Sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image_Sampling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Object_Count.py" beforeDir="false" afterPath="$PROJECT_DIR$/Object_Count.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,14 +14,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Object_Count.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Histogram_Equalization.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Histogram_Equalization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+              <folding>
+                <element signature="e#26#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Object_Count.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Object_Count.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="52" column="63" lean-forward="true" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="584">
+              <caret line="52" column="63" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image_Sampling.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Image_Sampling.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-851">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -33,11 +47,17 @@
       <file leaf-file-name="Image Segmentation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Image Segmentation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Steganography.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Steganography.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
         </entry>
@@ -69,11 +89,14 @@
         <option value="$PROJECT_DIR$/Lab5.py" />
         <option value="$PROJECT_DIR$/Lab4.py" />
         <option value="$PROJECT_DIR$/Steganography.py" />
-        <option value="$PROJECT_DIR$/Histogram_Equalization.py" />
-        <option value="$PROJECT_DIR$/Histogram_Matching.py" />
         <option value="$PROJECT_DIR$/Image_Sampling.py" />
         <option value="$PROJECT_DIR$/Image Segmentation.py" />
         <option value="$PROJECT_DIR$/Object_Count.py" />
+        <option value="$PROJECT_DIR$/Min_Avg_Error.py" />
+        <option value="$PROJECT_DIR$/Floyd-Steinberg.py" />
+        <option value="$PROJECT_DIR$/Dithering.py" />
+        <option value="$PROJECT_DIR$/Histogram_Matching.py" />
+        <option value="$PROJECT_DIR$/Histogram_Equalization.py" />
       </list>
     </option>
   </component>
@@ -119,7 +142,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Object_Count">
+  <component name="RunManager" selected="Python.Image_Sampling">
+    <configuration name="Dithering" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Image_Processing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dithering.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Histogram_Equalization" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Image_Processing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,24 +197,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Image Segmentation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Image_Processing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Image Segmentation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="Image_Sampling" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Image_Processing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -192,7 +215,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Object_Count" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Steganography" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Image_Processing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -204,26 +227,26 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Object_Count.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Steganography.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
+      <item itemvalue="Python.Dithering" />
       <item itemvalue="Python.Histogram_Matching" />
       <item itemvalue="Python.Histogram_Equalization" />
+      <item itemvalue="Python.Steganography" />
       <item itemvalue="Python.Image_Sampling" />
-      <item itemvalue="Python.Object_Count" />
-      <item itemvalue="Python.Image Segmentation" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Object_Count" />
-        <item itemvalue="Python.Image Segmentation" />
-        <item itemvalue="Python.Histogram_Matching" />
-        <item itemvalue="Python.Histogram_Equalization" />
         <item itemvalue="Python.Image_Sampling" />
+        <item itemvalue="Python.Steganography" />
+        <item itemvalue="Python.Histogram_Equalization" />
+        <item itemvalue="Python.Histogram_Matching" />
+        <item itemvalue="Python.Dithering" />
       </list>
     </recent_temporary>
   </component>
@@ -246,13 +269,13 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14632238" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30265212" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32970452" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30265212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32970452" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -271,30 +294,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Steganography.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="118" column="50" selection-start-line="118" selection-start-column="50" selection-end-line="118" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Image Segmentation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Histogram_Matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Histogram_Equalization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -313,9 +312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -330,9 +326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -368,9 +361,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="47" column="83" selection-start-line="47" selection-start-column="83" selection-end-line="47" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,9 +389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -463,54 +450,66 @@
     <entry file="file://$PROJECT_DIR$/Lab1.py" />
     <entry file="file://$PROJECT_DIR$/lab_2.py" />
     <entry file="file://$PROJECT_DIR$/Lab4.py" />
-    <entry file="file://$PROJECT_DIR$/Steganography.py">
+    <entry file="file://$PROJECT_DIR$/Min_Avg_Error.py" />
+    <entry file="file://$PROJECT_DIR$/Floyd-Steinberg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="120" column="20" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Histogram_Matching.py">
+    <entry file="file://$PROJECT_DIR$/Dithering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Histogram_Equalization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        <state relative-caret-position="216">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
           <folding>
             <element signature="e#26#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Image_Sampling.py">
+    <entry file="file://$PROJECT_DIR$/Object_Count.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="584">
+          <caret line="52" column="63" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Histogram_Matching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#22#84#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Image Segmentation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Object_Count.py">
+    <entry file="file://$PROJECT_DIR$/Steganography.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="52" column="63" lean-forward="true" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="186">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image_Sampling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-851">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>

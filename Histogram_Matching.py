@@ -20,12 +20,12 @@ class HistogramMatching:
     def display_initial(self):
         self.fig = plt.figure(figsize=(16, 16))
         ax = self.fig.add_subplot(3, 2, 1)
-        plt.imshow(self.img1.img_arr, cmap='gray')
+        plt.imshow(self.img1.new_img_arr, cmap='gray')
         ax = self.fig.add_subplot(3, 2, 2)
         plt.hist(self.img1.img_arr.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
 
         ax = self.fig.add_subplot(3, 2, 3)
-        plt.imshow(self.img2.img_arr, cmap='gray')
+        plt.imshow(self.img2.new_img_arr, cmap='gray')
         ax = self.fig.add_subplot(3, 2, 4)
         plt.hist(self.img2.img_arr.ravel(), bins=256, range=(0.0, 255.0), fc='k', ec='k')
 
